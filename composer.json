@@ -1,0 +1,43 @@
+{
+    "name": "tyhpdef/phpunit-phpunit-impl",
+    "description": "Implementation package for tyhpdef/phpunit-phpunit. Require tyhpdef/phpunit-phpunit, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "12.5.33.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.2",
+            "require": {
+                "tyhpdef/php": "@dev",
+                "tyhpdef/phar-io-version": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/phpunit-phpunit"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "phpunit/phpunit": "12.5.33"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev",
+        "tyhpdef/phar-io-version": "@dev"
+    }
+}
