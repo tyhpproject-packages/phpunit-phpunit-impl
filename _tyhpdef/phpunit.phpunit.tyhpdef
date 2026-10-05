@@ -735,10 +735,10 @@ namespace PHPUnit\Event\Test {
         */
         public function testClassName(): string;
         /**
-        * @return array<int, \PHPUnit\Event\Code\ClassMethod>
+        * @return array<int, Code\ClassMethod>
         * @generated
         */
-        public function calledMethods(): array<int, \PHPUnit\Event\Code\ClassMethod>;
+        public function calledMethods(): array<int, \Code\ClassMethod>;
         /**
         * @return string
         * @generated
@@ -847,10 +847,10 @@ namespace PHPUnit\Event\Test {
         */
         deprecated public function testClassName(): string;
         /**
-        * @return array<int, \PHPUnit\Event\Code\ClassMethod>
+        * @return array<int, Code\ClassMethod>
         * @generated
         */
-        public function calledMethods(): array<int, \PHPUnit\Event\Code\ClassMethod>;
+        public function calledMethods(): array<int, \Code\ClassMethod>;
         /**
         * @return string
         * @generated
@@ -957,10 +957,10 @@ namespace PHPUnit\Event\Test {
         */
         public function testClassName(): string;
         /**
-        * @return array<int, \PHPUnit\Event\Code\ClassMethod>
+        * @return array<int, Code\ClassMethod>
         * @generated
         */
-        public function calledMethods(): array<int, \PHPUnit\Event\Code\ClassMethod>;
+        public function calledMethods(): array<int, \Code\ClassMethod>;
         /**
         * @return string
         * @generated
@@ -1069,10 +1069,10 @@ namespace PHPUnit\Event\Test {
         */
         deprecated public function testClassName(): string;
         /**
-        * @return array<int, \PHPUnit\Event\Code\ClassMethod>
+        * @return array<int, Code\ClassMethod>
         * @generated
         */
-        public function calledMethods(): array<int, \PHPUnit\Event\Code\ClassMethod>;
+        public function calledMethods(): array<int, \Code\ClassMethod>;
         /**
         * @return string
         * @generated
@@ -1181,10 +1181,10 @@ namespace PHPUnit\Event\Test {
         */
         deprecated public function testClassName(): string;
         /**
-        * @return array<int, \PHPUnit\Event\Code\ClassMethod>
+        * @return array<int, Code\ClassMethod>
         * @generated
         */
-        public function calledMethods(): array<int, \PHPUnit\Event\Code\ClassMethod>;
+        public function calledMethods(): array<int, \Code\ClassMethod>;
         /**
         * @return string
         * @generated
@@ -1293,10 +1293,10 @@ namespace PHPUnit\Event\Test {
         */
         deprecated public function testClassName(): string;
         /**
-        * @return array<int, \PHPUnit\Event\Code\ClassMethod>
+        * @return array<int, Code\ClassMethod>
         * @generated
         */
-        public function calledMethods(): array<int, \PHPUnit\Event\Code\ClassMethod>;
+        public function calledMethods(): array<int, \Code\ClassMethod>;
         /**
         * @return string
         * @generated
@@ -4206,6 +4206,13 @@ namespace PHPUnit\Framework {
         */
         public static final function assertXmlStringNotEqualsXmlString(string $expectedXml, string $actualXml, string $message = ''): void;
         /**
+        * Evaluates a PHPUnit\Framework\Constraint matcher object.
+        *
+        * @throws ExpectationFailedException
+        * @generated
+        */
+        public static final function assertThat(mixed $value, \PHPUnit\Framework\Constraint\Constraint $constraint, string $message = ''): void;
+        /**
         * Asserts that a string is a valid JSON string.
         *
         * @throws ExpectationFailedException
@@ -4255,6 +4262,115 @@ namespace PHPUnit\Framework {
         */
         public static final function assertJsonFileNotEqualsJsonFile(string $expectedFile, string $actualFile, string $message = ''): void;
         /**
+        * @throws Exception
+        * @generated
+        */
+        public static final function logicalAnd(mixed ...$constraints): \PHPUnit\Framework\Constraint\LogicalAnd;
+        public static final function logicalOr(mixed ...$constraints): \PHPUnit\Framework\Constraint\LogicalOr;
+        public static final function logicalNot(\PHPUnit\Framework\Constraint\Constraint $constraint): \PHPUnit\Framework\Constraint\LogicalNot;
+        public static final function logicalXor(mixed ...$constraints): \PHPUnit\Framework\Constraint\LogicalXor;
+        public static final function anything(): \PHPUnit\Framework\Constraint\IsAnything;
+        public static final function isTrue(): \PHPUnit\Framework\Constraint\IsTrue;
+        /**
+        * @template CallbackInput of mixed
+        * @param callable $callback
+        * @return \PHPUnit\Framework\Constraint\Callback
+        * @generated
+        */
+        public static final function callback<CallbackInput extends mixed>(callable $callback): \PHPUnit\Framework\Constraint\Callback;
+        public static final function isFalse(): \PHPUnit\Framework\Constraint\IsFalse;
+        public static final function isJson(): \PHPUnit\Framework\Constraint\IsJson;
+        public static final function isNull(): \PHPUnit\Framework\Constraint\IsNull;
+        public static final function isFinite(): \PHPUnit\Framework\Constraint\IsFinite;
+        public static final function isInfinite(): \PHPUnit\Framework\Constraint\IsInfinite;
+        public static final function isNan(): \PHPUnit\Framework\Constraint\IsNan;
+        public static final function containsEqual(mixed $value): \PHPUnit\Framework\Constraint\TraversableContainsEqual;
+        public static final function containsIdentical(mixed $value): \PHPUnit\Framework\Constraint\TraversableContainsIdentical;
+        /**
+        * @param string $type
+        * @throws Exception
+        * @deprecated https://github.com/sebastianbergmann/phpunit/issues/6060
+        * @generated
+        */
+        deprecated public static final function containsOnly(string $type): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        public static final function containsOnlyArray(): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        public static final function containsOnlyBool(): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        public static final function containsOnlyCallable(): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        public static final function containsOnlyFloat(): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        public static final function containsOnlyInt(): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        public static final function containsOnlyIterable(): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        public static final function containsOnlyNull(): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        public static final function containsOnlyNumeric(): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        public static final function containsOnlyObject(): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        public static final function containsOnlyResource(): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        public static final function containsOnlyClosedResource(): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        public static final function containsOnlyScalar(): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        public static final function containsOnlyString(): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        /**
+        * @param string $className
+        * @throws Exception
+        * @generated
+        */
+        public static final function containsOnlyInstancesOf(string $className): \PHPUnit\Framework\Constraint\TraversableContainsOnly;
+        public static final function arrayHasKey(mixed $key): \PHPUnit\Framework\Constraint\ArrayHasKey;
+        public static final function isList(): \PHPUnit\Framework\Constraint\IsList;
+        public static final function equalTo(mixed $value): \PHPUnit\Framework\Constraint\IsEqual;
+        public static final function equalToCanonicalizing(mixed $value): \PHPUnit\Framework\Constraint\IsEqualCanonicalizing;
+        public static final function equalToIgnoringCase(mixed $value): \PHPUnit\Framework\Constraint\IsEqualIgnoringCase;
+        public static final function equalToWithDelta(mixed $value, float $delta): \PHPUnit\Framework\Constraint\IsEqualWithDelta;
+        public static final function isEmpty(): \PHPUnit\Framework\Constraint\IsEmpty;
+        public static final function isWritable(): \PHPUnit\Framework\Constraint\IsWritable;
+        public static final function isReadable(): \PHPUnit\Framework\Constraint\IsReadable;
+        public static final function directoryExists(): \PHPUnit\Framework\Constraint\DirectoryExists;
+        public static final function fileExists(): \PHPUnit\Framework\Constraint\FileExists;
+        public static final function greaterThan(mixed $value): \PHPUnit\Framework\Constraint\GreaterThan;
+        public static final function greaterThanOrEqual(mixed $value): \PHPUnit\Framework\Constraint\LogicalOr;
+        public static final function identicalTo(mixed $value): \PHPUnit\Framework\Constraint\IsIdentical;
+        /**
+        * @throws UnknownClassOrInterfaceException
+        * @generated
+        */
+        public static final function isInstanceOf(string $className): \PHPUnit\Framework\Constraint\IsInstanceOf;
+        public static final function isArray(): \PHPUnit\Framework\Constraint\IsType;
+        public static final function isBool(): \PHPUnit\Framework\Constraint\IsType;
+        public static final function isCallable(): \PHPUnit\Framework\Constraint\IsType;
+        public static final function isFloat(): \PHPUnit\Framework\Constraint\IsType;
+        public static final function isInt(): \PHPUnit\Framework\Constraint\IsType;
+        public static final function isIterable(): \PHPUnit\Framework\Constraint\IsType;
+        public static final function isNumeric(): \PHPUnit\Framework\Constraint\IsType;
+        public static final function isObject(): \PHPUnit\Framework\Constraint\IsType;
+        public static final function isResource(): \PHPUnit\Framework\Constraint\IsType;
+        public static final function isClosedResource(): \PHPUnit\Framework\Constraint\IsType;
+        public static final function isScalar(): \PHPUnit\Framework\Constraint\IsType;
+        public static final function isString(): \PHPUnit\Framework\Constraint\IsType;
+        /**
+        * @param string $type
+        * @throws UnknownNativeTypeException
+        * @deprecated https://github.com/sebastianbergmann/phpunit/issues/6053
+        * @generated
+        */
+        deprecated public static final function isType(string $type): \PHPUnit\Framework\Constraint\IsType;
+        public static final function lessThan(mixed $value): \PHPUnit\Framework\Constraint\LessThan;
+        public static final function lessThanOrEqual(mixed $value): \PHPUnit\Framework\Constraint\LogicalOr;
+        public static final function matchesRegularExpression(string $pattern): \PHPUnit\Framework\Constraint\RegularExpression;
+        public static final function matches(string $string): \PHPUnit\Framework\Constraint\StringMatchesFormatDescription;
+        /**
+        * @param string $prefix
+        * @throws InvalidArgumentException
+        * @generated
+        */
+        public static final function stringStartsWith(string $prefix): \PHPUnit\Framework\Constraint\StringStartsWith;
+        public static final function stringContains(string $string, bool $case = true): \PHPUnit\Framework\Constraint\StringContains;
+        /**
+        * @param string $suffix
+        * @throws InvalidArgumentException
+        * @generated
+        */
+        public static final function stringEndsWith(string $suffix): \PHPUnit\Framework\Constraint\StringEndsWith;
+        public static final function stringEqualsStringIgnoringLineEndings(string $string): \PHPUnit\Framework\Constraint\StringEqualsStringIgnoringLineEndings;
+        public static final function countOf(int $count): \PHPUnit\Framework\Constraint\Count;
+        public static final function objectEquals(object $object, string $method = 'equals'): \PHPUnit\Framework\Constraint\ObjectEquals;
+        /**
         * Fails a test with the given message.
         *
         * @throws AssertionFailedError
@@ -4289,6 +4405,21 @@ namespace PHPUnit\Framework {
         public static final function resetCount(): void;
     }
     /**
+    * Exception for expectations which failed their check.
+    *
+    * The exception contains the error message and optionally a
+    * SebastianBergmann\Comparator\ComparisonFailure which is used to
+    * generate diff output of the failed expectations.
+    *
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class ExpectationFailedException extends \PHPUnit\Framework\AssertionFailedError {
+        protected ?\SebastianBergmann\Comparator\ComparisonFailure $comparisonFailure ?? null;
+        public function __construct(string $message, ?\SebastianBergmann\Comparator\ComparisonFailure $comparisonFailure = null, ?\Exception $previous = null): void;
+        public function getComparisonFailure(): ?\SebastianBergmann\Comparator\ComparisonFailure;
+    }
+    /**
     * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
     * @generated
     */
@@ -4318,7 +4449,260 @@ namespace PHPUnit\Framework {
     * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
     * @generated
     */
+    abstract class TestCase extends \PHPUnit\Framework\Assert implements \PHPUnit\Framework\Reorderable, \PHPUnit\Framework\SelfDescribing, \PHPUnit\Framework\Test {
+        /**
+        * This method is called before the first test of this test class is run.
+        *
+        * @codecoverageignore
+        * @generated
+        */
+        public static function setUpBeforeClass(): void;
+        /**
+        * This method is called after the last test of this test class is run.
+        *
+        * @codecoverageignore
+        * @generated
+        */
+        public static function tearDownAfterClass(): void;
+        /**
+        * This method is called before each test.
+        *
+        * @codecoverageignore
+        * @generated
+        */
+        protected function setUp(): void;
+        /**
+        * Performs assertions shared by all tests of a test case.
+        *
+        * This method is called between setUp() and test.
+        *
+        * @codecoverageignore
+        * @generated
+        */
+        protected function assertPreConditions(): void;
+        /**
+        * Performs assertions shared by all tests of a test case.
+        *
+        * This method is called between test and tearDown().
+        *
+        * @codecoverageignore
+        * @generated
+        */
+        protected function assertPostConditions(): void;
+        /**
+        * This method is called after each test.
+        *
+        * @codecoverageignore
+        * @generated
+        */
+        protected function tearDown(): void;
+        /**
+        * Returns a matcher that matches when the method is executed
+        *
+        * zero or more times.
+        *
+        * @deprecated https://github.com/sebastianbergmann/phpunit/issues/6461
+        * @generated
+        */
+        deprecated protected final function any(): \PHPUnit\Framework\MockObject\Rule\AnyInvokedCount;
+        /**
+        * Returns a matcher that matches when the method is never executed.
+        *
+        * @generated
+        */
+        protected final function never(): \PHPUnit\Framework\MockObject\Rule\InvokedCount;
+        /**
+        * Returns a matcher that matches when the method is executed
+        *
+        * at least N times.
+        *
+        * @generated
+        */
+        protected final function atLeast(int $requiredInvocations): \PHPUnit\Framework\MockObject\Rule\InvokedAtLeastCount;
+        /**
+        * Returns a matcher that matches when the method is executed at least once.
+        *
+        * @generated
+        */
+        protected final function atLeastOnce(): \PHPUnit\Framework\MockObject\Rule\InvokedAtLeastOnce;
+        /**
+        * Returns a matcher that matches when the method is executed exactly once.
+        *
+        * @generated
+        */
+        protected final function once(): \PHPUnit\Framework\MockObject\Rule\InvokedCount;
+        /**
+        * Returns a matcher that matches when the method is executed
+        *
+        * exactly $count times.
+        *
+        * @generated
+        */
+        protected final function exactly(int $count): \PHPUnit\Framework\MockObject\Rule\InvokedCount;
+        /**
+        * Returns a matcher that matches when the method is executed
+        *
+        * at most N times.
+        *
+        * @generated
+        */
+        protected final function atMost(int $allowedInvocations): \PHPUnit\Framework\MockObject\Rule\InvokedAtMostCount;
+        protected final function throwException(\Throwable $exception): \PHPUnit\Framework\MockObject\Stub\Exception;
+        protected final function getActualOutputForAssertion(): string;
+        protected final function expectOutputRegex(string $expectedRegex): void;
+        protected final function expectOutputString(string $expectedString): void;
+        protected final function expectErrorLog(): void;
+        /**
+        * @param string $exception
+        * @generated
+        */
+        protected final function expectException(string $exception): void;
+        protected final function expectExceptionCode(int|string $code): void;
+        protected final function expectExceptionMessage(string $message): void;
+        protected final function expectExceptionMessageMatches(string $regularExpression): void;
+        /**
+        * Sets up an expectation for an exception to be raised by the code under test.
+        *
+        * Information for expected exception class, expected exception message, and
+        * expected exception code are retrieved from a given Exception object.
+        *
+        * @generated
+        */
+        protected final function expectExceptionObject(\Throwable $exception): void;
+        protected final function expectNotToPerformAssertions(): void;
+        /**
+        * @param string $expectedUserDeprecationMessage
+        * @generated
+        */
+        protected final function expectUserDeprecationMessage(string $expectedUserDeprecationMessage): void;
+        /**
+        * @param string $expectedUserDeprecationMessageRegularExpression
+        * @generated
+        */
+        protected final function expectUserDeprecationMessageMatches(string $expectedUserDeprecationMessageRegularExpression): void;
+        /**
+        * Returns a builder object to create mock objects using a fluent interface.
+        *
+        * @template RealInstanceType of object
+        * @param string $className
+        * @return \PHPUnit\Framework\MockObject\MockBuilder
+        * @generated
+        */
+        protected final function getMockBuilder<RealInstanceType extends object>(string $className): \PHPUnit\Framework\MockObject\MockBuilder;
+        protected final function registerComparator(\SebastianBergmann\Comparator\Comparator $comparator): void;
+        /**
+        * @param string $classOrInterface
+        * @generated
+        */
+        protected final function registerFailureType(string $classOrInterface): void;
+        /**
+        * Creates a mock object for the specified interface or class.
+        *
+        * @template RealInstanceType of object
+        * @param string $type
+        * @throws InvalidArgumentException
+        * @throws MockObjectException
+        * @throws NoPreviousThrowableException
+        * @return \PHPUnit\Framework\MockObject\MockObject
+        * @generated
+        */
+        protected final function createMock<RealInstanceType extends object>(string $type): \PHPUnit\Framework\MockObject\MockObject;
+        /**
+        * @param array<int, string> $interfaces
+        * @throws MockObjectException
+        * @generated
+        */
+        protected final function createMockForIntersectionOfInterfaces(array<int, string> $interfaces): \PHPUnit\Framework\MockObject\MockObject;
+        /**
+        * Creates (and configures) a mock object for the specified interface or class.
+        *
+        * @template RealInstanceType of object
+        * @param string $type
+        * @param array<mixed, mixed> $configuration
+        * @throws InvalidArgumentException
+        * @throws MockObjectException
+        * @throws NoPreviousThrowableException
+        * @return \PHPUnit\Framework\MockObject\MockObject
+        * @generated
+        */
+        protected final function createConfiguredMock<RealInstanceType extends object>(string $type, array<mixed, mixed> $configuration): \PHPUnit\Framework\MockObject\MockObject;
+        /**
+        * Creates a partial mock object for the specified interface or class.
+        *
+        * @param string $type
+        * @param array<int, mixed> $methods
+        * @template RealInstanceType of object
+        * @throws InvalidArgumentException
+        * @throws MockObjectException
+        * @return \PHPUnit\Framework\MockObject\MockObject
+        * @generated
+        */
+        protected final function createPartialMock<RealInstanceType extends object>(string $type, array<int, mixed> $methods): \PHPUnit\Framework\MockObject\MockObject;
+        /**
+        * @param string $additionalInformation
+        * @generated
+        */
+        protected final function provideAdditionalInformation(string $additionalInformation): void;
+        protected function transformException(\Throwable $t): \Throwable;
+        /**
+        * This method is called when a test method did not execute successfully.
+        *
+        * @throws Throwable
+        * @generated
+        */
+        protected function onNotSuccessfulTest(\Throwable $t): never;
+        /**
+        * @param array<mixed> $testArguments
+        * @generated
+        */
+        protected function invokeTestMethod(string $methodName, array<mixed> $testArguments): mixed;
+        /**
+        * Returns a builder object to create test stubs using a fluent interface.
+        *
+        * @template RealInstanceType of object
+        * @param string $className
+        * @return \PHPUnit\Framework\MockObject\TestStubBuilder
+        * @generated
+        */
+        protected static final function getStubBuilder<RealInstanceType extends object>(string $className): \PHPUnit\Framework\MockObject\TestStubBuilder;
+        /**
+        * Creates a test stub for the specified interface or class.
+        *
+        * @template RealInstanceType of object
+        * @param string $type
+        * @throws InvalidArgumentException
+        * @throws MockObjectException
+        * @throws NoPreviousThrowableException
+        * @return \PHPUnit\Framework\MockObject\Stub
+        * @generated
+        */
+        protected static final function createStub<RealInstanceType extends object>(string $type): \PHPUnit\Framework\MockObject\Stub;
+        /**
+        * @param array<int, string> $interfaces
+        * @throws MockObjectException
+        * @generated
+        */
+        protected static final function createStubForIntersectionOfInterfaces(array<int, string> $interfaces): \PHPUnit\Framework\MockObject\Stub;
+        /**
+        * Creates (and configures) a test stub for the specified interface or class.
+        *
+        * @template RealInstanceType of object
+        * @param string $type
+        * @param array<mixed, mixed> $configuration
+        * @throws InvalidArgumentException
+        * @throws MockObjectException
+        * @throws NoPreviousThrowableException
+        * @return \PHPUnit\Framework\MockObject\Stub
+        * @generated
+        */
+        protected static final function createConfiguredStub<RealInstanceType extends object>(string $type, array<mixed, mixed> $configuration): \PHPUnit\Framework\MockObject\Stub;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
     final readonly class ChildProcessResultProcessor {
+        public function __construct(\PHPUnit\Event\Facade $eventFacade, \PHPUnit\Event\Emitter $emitter, \PHPUnit\TestRunner\TestResult\PassedTests $passedTests, \PHPUnit\Runner\CodeCoverage $codeCoverage): void;
         /**
         * @param ?string $processResultNonce
         * @generated
@@ -5368,14 +5752,1497 @@ namespace PHPUnit\Framework\Attributes {
     }
 }
 namespace PHPUnit\Framework\Constraint {
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsFalse extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsTrue extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @template CallbackInput of mixed
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class Callback<CallbackInput extends mixed> extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * @param callable $callback
+        * @generated
+        */
+        public function __construct(callable $callback): void;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        public function isVariadic(): bool;
+        /**
+        * Evaluates the constraint for parameter $value. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @param CallbackInput $other
+        * @generated
+        */
+        protected function matches(CallbackInput $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    class Count extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(int $expected): void;
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @throws Exception
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * @throws Exception
+        * @generated
+        */
+        protected function getCountOf(mixed $other): ?int;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        *
+        * @throws Exception
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class GreaterThan extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(mixed $value): void;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsEmpty extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        *
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class LessThan extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(mixed $value): void;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class SameSize extends \PHPUnit\Framework\Constraint\Count {
+        /**
+        * @param \Countable|iterable $expected
+        * @throws Exception
+        * @generated
+        */
+        public function __construct(\Countable|iterable $expected): void;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    abstract class Constraint implements \Countable, \PHPUnit\Framework\SelfDescribing {
+        /**
+        * @template A
+        * @param A $actual
+        * @return A
+        * @generated
+        */
+        public final function __invoke<A>(A $actual): A;
+        /**
+        * Evaluates the constraint for parameter $other.
+        *
+        * If $returnResult is set to false (the default), an exception is thrown
+        * in case of a failure. null is returned otherwise.
+        * 
+        * If $returnResult is true, the result of the evaluation is returned as
+        * a boolean value instead: true in case of success, false in case of a
+        * failure.
+        *
+        * @throws ExpectationFailedException
+        * @generated
+        */
+        public function evaluate(mixed $other, string $description = '', bool $returnResult = false): ?bool;
+        /**
+        * Counts the number of constraint elements.
+        *
+        * @generated
+        */
+        public function count(): int;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        * 
+        * This method can be overridden to implement the evaluation algorithm.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * Throws an exception for the given compared value and test description.
+        *
+        * @throws ExpectationFailedException
+        * @generated
+        */
+        protected function fail(mixed $other, string $description, ?\SebastianBergmann\Comparator\ComparisonFailure $comparisonFailure = null): never;
+        /**
+        * Return additional failure description where needed.
+        *
+        * The function can be overridden to provide additional failure
+        * information like a diff
+        *
+        * @generated
+        */
+        protected function additionalFailureDescription(mixed $other): string;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        * 
+        * To provide additional failure information additionalFailureDescription
+        * can be used.
+        *
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+        /**
+        * Returns a custom string representation of the constraint object when it
+        *
+        * appears in context of an $operator expression.
+        * 
+        * The purpose of this method is to provide meaningful descriptive string
+        * in context of operators such as LogicalNot. Native PHPUnit constraints
+        * are supported out of the box by LogicalNot, but externally developed
+        * ones had no way to provide correct strings in this context.
+        * 
+        * The method shall return empty string, when it does not handle
+        * customization by itself.
+        *
+        * @generated
+        */
+        protected function toStringInContext(\PHPUnit\Framework\Constraint\Operator $operator, mixed $role): string;
+        /**
+        * Returns the description of the failure when this constraint appears in
+        *
+        * context of an $operator expression.
+        * 
+        * The purpose of this method is to provide meaningful failure description
+        * in context of operators such as LogicalNot. Native PHPUnit constraints
+        * are supported out of the box by LogicalNot, but externally developed
+        * ones had no way to provide correct messages in this context.
+        * 
+        * The method shall return empty string, when it does not handle
+        * customization by itself.
+        *
+        * @generated
+        */
+        protected function failureDescriptionInContext(\PHPUnit\Framework\Constraint\Operator $operator, mixed $role, mixed $other): string;
+        /**
+        * Reduces the sub-expression starting at $this by skipping degenerate
+        *
+        * sub-expression and returns first descendant constraint that starts
+        * a non-reducible sub-expression.
+        * 
+        * Returns $this for terminal constraints and for operators that start
+        * non-reducible sub-expression, or the nearest descendant of $this that
+        * starts a non-reducible sub-expression.
+        * 
+        * A constraint expression may be modelled as a tree with non-terminal
+        * nodes (operators) and terminal nodes. For example:
+        * 
+        *      LogicalOr           (operator, non-terminal)
+        *      + LogicalAnd        (operator, non-terminal)
+        *      | + IsType('int')   (terminal)
+        *      | + GreaterThan(10) (terminal)
+        *      + LogicalNot        (operator, non-terminal)
+        *        + IsType('array') (terminal)
+        * 
+        * A degenerate sub-expression is a part of the tree, that effectively does
+        * not contribute to the evaluation of the expression it appears in. An example
+        * of degenerate sub-expression is a BinaryOperator constructed with single
+        * operand or nested BinaryOperators, each with single operand. An
+        * expression involving a degenerate sub-expression is equivalent to a
+        * reduced expression with the degenerate sub-expression removed, for example
+        * 
+        *      LogicalAnd          (operator)
+        *      + LogicalOr         (degenerate operator)
+        *      | + LogicalAnd      (degenerate operator)
+        *      |   + IsType('int') (terminal)
+        *      + GreaterThan(10)   (terminal)
+        * 
+        * is equivalent to
+        * 
+        *      LogicalAnd          (operator)
+        *      + IsType('int')     (terminal)
+        *      + GreaterThan(10)   (terminal)
+        * 
+        * because the subexpression
+        * 
+        *      + LogicalOr
+        *        + LogicalAnd
+        *          + -
+        * 
+        * is degenerate. Calling reduce() on the LogicalOr object above, as well
+        * as on LogicalAnd, shall return the IsType('int') instance.
+        * 
+        * Other specific reductions can be implemented, for example cascade of
+        * LogicalNot operators
+        * 
+        *      + LogicalNot
+        *        + LogicalNot
+        *          +LogicalNot
+        *           + IsTrue
+        * 
+        * can be reduced to
+        * 
+        *      LogicalNot
+        *      + IsTrue
+        *
+        * @generated
+        */
+        protected function reduce(): self;
+        /**
+        * @return string
+        * @generated
+        */
+        protected function valueToTypeStringFragment(mixed $value): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsEqual extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(mixed $value): void;
+        /**
+        * Evaluates the constraint for parameter $other.
+        *
+        * If $returnResult is set to false (the default), an exception is thrown
+        * in case of a failure. null is returned otherwise.
+        * 
+        * If $returnResult is true, the result of the evaluation is returned as
+        * a boolean value instead: true in case of success, false in case of a
+        * failure.
+        *
+        * @throws ExpectationFailedException
+        * @generated
+        */
+        public function evaluate(mixed $other, string $description = '', bool $returnResult = false): bool;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsEqualCanonicalizing extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(mixed $value): void;
+        /**
+        * Evaluates the constraint for parameter $other.
+        *
+        * If $returnResult is set to false (the default), an exception is thrown
+        * in case of a failure. null is returned otherwise.
+        * 
+        * If $returnResult is true, the result of the evaluation is returned as
+        * a boolean value instead: true in case of success, false in case of a
+        * failure.
+        *
+        * @throws ExpectationFailedException
+        * @generated
+        */
+        public function evaluate(mixed $other, string $description = '', bool $returnResult = false): bool;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsEqualIgnoringCase extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(mixed $value): void;
+        /**
+        * Evaluates the constraint for parameter $other.
+        *
+        * If $returnResult is set to false (the default), an exception is thrown
+        * in case of a failure. null is returned otherwise.
+        * 
+        * If $returnResult is true, the result of the evaluation is returned as
+        * a boolean value instead: true in case of success, false in case of a
+        * failure.
+        *
+        * @throws ExpectationFailedException
+        * @generated
+        */
+        public function evaluate(mixed $other, string $description = '', bool $returnResult = false): bool;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsEqualWithDelta extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(mixed $value, float $delta): void;
+        /**
+        * Evaluates the constraint for parameter $other.
+        *
+        * If $returnResult is set to false (the default), an exception is thrown
+        * in case of a failure. null is returned otherwise.
+        * 
+        * If $returnResult is true, the result of the evaluation is returned as
+        * a boolean value instead: true in case of success, false in case of a
+        * failure.
+        *
+        * @throws ExpectationFailedException
+        * @generated
+        */
+        public function evaluate(mixed $other, string $description = '', bool $returnResult = false): bool;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class DirectoryExists extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        *
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class FileExists extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        *
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsReadable extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        *
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsWritable extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        *
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsAnything extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Evaluates the constraint for parameter $other.
+        *
+        * If $returnResult is set to false (the default), an exception is thrown
+        * in case of a failure. null is returned otherwise.
+        * 
+        * If $returnResult is true, the result of the evaluation is returned as
+        * a boolean value instead: true in case of success, false in case of a
+        * failure.
+        *
+        * @throws void
+        * @generated
+        */
+        public function evaluate(mixed $other, string $description = '', bool $returnResult = false): ?bool;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Counts the number of constraint elements.
+        *
+        * @generated
+        */
+        public function count(): int;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsIdentical extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(mixed $value): void;
+        /**
+        * Evaluates the constraint for parameter $other.
+        *
+        * If $returnResult is set to false (the default), an exception is thrown
+        * in case of a failure. null is returned otherwise.
+        * 
+        * If $returnResult is true, the result of the evaluation is returned as
+        * a boolean value instead: true in case of success, false in case of a
+        * failure.
+        *
+        * @throws ExpectationFailedException
+        * @generated
+        */
+        public function evaluate(mixed $other, string $description = '', bool $returnResult = false): ?bool;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        *
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class JsonMatches extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(string $value): void;
+        /**
+        * Returns a string representation of the object.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        * 
+        * This method can be overridden to implement the evaluation algorithm.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * Throws an exception for the given compared value and test description.
+        *
+        * @throws ExpectationFailedException
+        * @throws InvalidJsonException
+        * @generated
+        */
+        protected function fail(mixed $other, string $description, ?\SebastianBergmann\Comparator\ComparisonFailure $comparisonFailure = null): never;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsFinite extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsInfinite extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsNan extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class ObjectEquals extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(object $object, string $method = 'equals'): void;
+        public function toString(): string;
+        /**
+        * @throws ActualValueIsNotAnObjectException
+        * @throws ComparisonMethodDoesNotAcceptParameterTypeException
+        * @throws ComparisonMethodDoesNotDeclareBoolReturnTypeException
+        * @throws ComparisonMethodDoesNotDeclareExactlyOneParameterException
+        * @throws ComparisonMethodDoesNotDeclareParameterTypeException
+        * @throws ComparisonMethodDoesNotExistException
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * @phpstan-ignore method.dynamicName
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class ObjectHasProperty extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(string $propertyName): void;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @param mixed $other value or object to evaluate
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        *
+        * @param mixed $other evaluated value or object
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    abstract class BinaryOperator extends \PHPUnit\Framework\Constraint\Operator {
+        protected function __construct(mixed ...$constraints): void;
+        /**
+        * Returns the number of operands (constraints).
+        *
+        * @generated
+        */
+        public final function arity(): int;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Counts the number of constraint elements.
+        *
+        * @generated
+        */
+        public function count(): int;
+        /**
+        * @return array<int, Constraint>
+        * @generated
+        */
+        protected final function constraints(): array<int, \PHPUnit\Framework\Constraint\Constraint>;
+        /**
+        * Returns true if the $constraint needs to be wrapped with braces.
+        *
+        * @generated
+        */
+        protected final function constraintNeedsParentheses(\PHPUnit\Framework\Constraint\Constraint $constraint): bool;
+        /**
+        * Reduces the sub-expression starting at $this by skipping degenerate
+        *
+        * sub-expression and returns first descendant constraint that starts
+        * a non-reducible sub-expression.
+        * 
+        * See Constraint::reduce() for more.
+        *
+        * @generated
+        */
+        protected function reduce(): \PHPUnit\Framework\Constraint\Constraint;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class LogicalAnd extends \PHPUnit\Framework\Constraint\BinaryOperator {
+        public static function fromConstraints(mixed ...$constraints): self;
+        /**
+        * Returns the name of this operator.
+        *
+        * @generated
+        */
+        public function operator(): string;
+        /**
+        * Returns this operator's precedence.
+        *
+        * @see https://www.php.net/manual/en/language.operators.precedence.php
+        * @generated
+        */
+        public function precedence(): int;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class LogicalNot extends \PHPUnit\Framework\Constraint\UnaryOperator {
+        public static function negate(string $string): string;
+        /**
+        * Returns the name of this operator.
+        *
+        * @generated
+        */
+        public function operator(): string;
+        /**
+        * Returns this operator's precedence.
+        *
+        * @see https://www.php.net/manual/en/language.operators.precedence.php
+        * @generated
+        */
+        public function precedence(): int;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @throws ExpectationFailedException
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * Applies additional transformation to strings returned by toString() or
+        *
+        * failureDescription().
+        *
+        * @generated
+        */
+        protected function transformString(string $string): string;
+        /**
+        * Reduces the sub-expression starting at $this by skipping degenerate
+        *
+        * sub-expression and returns first descendant constraint that starts
+        * a non-reducible sub-expression.
+        * 
+        * See Constraint::reduce() for more.
+        *
+        * @generated
+        */
+        protected function reduce(): \PHPUnit\Framework\Constraint\Constraint;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class LogicalOr extends \PHPUnit\Framework\Constraint\BinaryOperator {
+        public static function fromConstraints(mixed ...$constraints): self;
+        /**
+        * Returns the name of this operator.
+        *
+        * @generated
+        */
+        public function operator(): string;
+        /**
+        * Returns this operator's precedence.
+        *
+        * @see https://www.php.net/manual/en/language.operators.precedence.php
+        * @generated
+        */
+        public function precedence(): int;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        public function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class LogicalXor extends \PHPUnit\Framework\Constraint\BinaryOperator {
+        public static function fromConstraints(mixed ...$constraints): self;
+        /**
+        * Returns the name of this operator.
+        *
+        * @generated
+        */
+        public function operator(): string;
+        /**
+        * Returns this operator's precedence.
+        *
+        * @see https://www.php.net/manual/en/language.operators.precedence.php.
+        * @generated
+        */
+        public function precedence(): int;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @throws ExpectationFailedException
+        * @generated
+        */
+        public function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    abstract class Operator extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Returns the name of this operator.
+        *
+        * @generated
+        */
+        public abstract function operator(): string;
+        /**
+        * Returns this operator's precedence.
+        *
+        * @see https://www.php.net/manual/en/language.operators.precedence.php
+        * @generated
+        */
+        public abstract function precedence(): int;
+        /**
+        * Returns the number of operands.
+        *
+        * @generated
+        */
+        public abstract function arity(): int;
+        /**
+        * Validates $constraint argument.
+        *
+        * @generated
+        */
+        protected function checkConstraint(mixed $constraint): \PHPUnit\Framework\Constraint\Constraint;
+        /**
+        * Returns true if the $constraint needs to be wrapped with braces.
+        *
+        * @generated
+        */
+        protected function constraintNeedsParentheses(\PHPUnit\Framework\Constraint\Constraint $constraint): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    abstract class UnaryOperator extends \PHPUnit\Framework\Constraint\Operator {
+        public function __construct(mixed $constraint): void;
+        /**
+        * Returns the number of operands (constraints).
+        *
+        * @generated
+        */
+        public function arity(): int;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Counts the number of constraint elements.
+        *
+        * @generated
+        */
+        public function count(): int;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        *
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+        /**
+        * Transforms string returned by the member constraint's toString() or
+        *
+        * failureDescription() such that it reflects constraint's participation in
+        * this expression.
+        * 
+        * The method may be overwritten in a subclass to apply default
+        * transformation in case the operand constraint does not provide its own
+        * custom strings via toStringInContext() or failureDescriptionInContext().
+        *
+        * @generated
+        */
+        protected function transformString(string $string): string;
+        /**
+        * Provides access to $this->constraint for subclasses.
+        *
+        * @generated
+        */
+        protected final function constraint(): \PHPUnit\Framework\Constraint\Constraint;
+        /**
+        * Returns true if the $constraint needs to be wrapped with parentheses.
+        *
+        * @generated
+        */
+        protected function constraintNeedsParentheses(\PHPUnit\Framework\Constraint\Constraint $constraint): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsJson extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        *
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class RegularExpression extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(string $pattern): void;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @throws FrameworkException
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class StringContains extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(string $needle, bool $ignoreCase = false, bool $ignoreLineEndings = false): void;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        public function failureDescription(mixed $other): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class StringEndsWith extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * @throws EmptyStringException
+        * @generated
+        */
+        public function __construct(string $suffix): void;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class StringEqualsStringIgnoringLineEndings extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(string $string): void;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class StringMatchesFormatDescription extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(string $formatDescription): void;
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @throws FrameworkException
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        protected function failureDescription(mixed $other): string;
+        /**
+        * Returns a cleaned up diff.
+        *
+        * The expected string can contain placeholders like %s and %d.
+        * By using 'diff' such placeholders compared to the real output will
+        * always be different, although we don't want to show them as different.
+        * This method removes the expected differences by figuring out if a difference
+        * is allowed by the use of a placeholder.
+        * 
+        * The problem here are %A and %a multiline placeholders since we look at the
+        * expected and actual output line by line. If differences allowed by those placeholders
+        * stretch over multiple lines they will still end up in the final diff.
+        * And since they mess up the line sync between the expected and actual output
+        * all following allowed changes will not be detected/removed anymore.
+        *
+        * @generated
+        */
+        protected function additionalFailureDescription(mixed $other): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class StringStartsWith extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * @throws EmptyStringException
+        * @generated
+        */
+        public function __construct(string $prefix): void;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class ArrayHasKey extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(mixed $key): void;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        *
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsList extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        *
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    abstract class TraversableContains extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(mixed $value): void;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        *
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+        protected function value(): mixed;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class TraversableContainsEqual extends \PHPUnit\Framework\Constraint\TraversableContains {
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class TraversableContainsIdentical extends \PHPUnit\Framework\Constraint\TraversableContains {
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class TraversableContainsOnly extends \PHPUnit\Framework\Constraint\Constraint {
+        public static function forNativeType(\PHPUnit\Framework\NativeType $type): self;
+        /**
+        * @param string $type
+        * @generated
+        */
+        public static function forClassOrInterface(string $type): self;
+        /**
+        * Evaluates the constraint for parameter $other.
+        *
+        * If $returnResult is set to false (the default), an exception is thrown
+        * in case of a failure. null is returned otherwise.
+        * 
+        * If $returnResult is true, the result of the evaluation is returned as
+        * a boolean value instead: true in case of success, false in case of a
+        * failure.
+        *
+        * @throws ExpectationFailedException
+        * @generated
+        */
+        public function evaluate(mixed $other, string $description = '', bool $returnResult = false): bool;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsInstanceOf extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * @throws UnknownClassOrInterfaceException
+        * @generated
+        */
+        public function __construct(string $name): void;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+        /**
+        * Returns the description of the failure.
+        *
+        * The beginning of failure messages is "Failed asserting that" in most
+        * cases. This method should return the second part of that sentence.
+        *
+        * @generated
+        */
+        protected function failureDescription(mixed $other): string;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsNull extends \PHPUnit\Framework\Constraint\Constraint {
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class IsType extends \PHPUnit\Framework\Constraint\Constraint {
+        public function __construct(\PHPUnit\Framework\NativeType $type): void;
+        /**
+        * Returns a string representation of the constraint.
+        *
+        * @generated
+        */
+        public function toString(): string;
+        /**
+        * Evaluates the constraint for parameter $other. Returns true if the
+        *
+        * constraint is met, false otherwise.
+        *
+        * @generated
+        */
+        protected function matches(mixed $other): bool;
+    }
 }
 namespace PHPUnit\Framework\MockObject {
+    /**
+    * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+    * @generated
+    */
+    final class NeverReturningMethodException extends \RuntimeException implements \PHPUnit\Framework\MockObject\Exception {
+        /**
+        * @param string $className
+        * @param string $methodName
+        * @generated
+        */
+        public function __construct(string $className, string $methodName): void;
+    }
     /**
     * @template MockedType
     * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
     * @generated
     */
     final class MockBuilder<MockedType> extends \PHPUnit\Framework\MockObject\TestDoubleBuilder {
+        /**
+        * @param string $type
+        * @generated
+        */
+        public function __construct(\PHPUnit\Framework\TestCase $testCase, string $type): void;
         /**
         * Creates a mock object using a fluent interface.
         *
@@ -5406,6 +7273,13 @@ namespace PHPUnit\Framework\MockObject {
     interface InvocationStubber {
         /**
         * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+        * @param \PHPUnit\Framework\Constraint\Constraint|\PHPUnit\Framework\MockObject\Runtime\PropertyHook|string $constraint
+        * @return self
+        * @generated
+        */
+        public function method(\PHPUnit\Framework\Constraint\Constraint|\PHPUnit\Framework\MockObject\Runtime\PropertyHook|string $constraint): self;
+        /**
+        * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
         * @param string $id
         * @return self
         * @generated
@@ -5429,6 +7303,12 @@ namespace PHPUnit\Framework\MockObject {
         * @generated
         */
         public function withAnyParameters(): self;
+        /**
+        * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+        * @return self
+        * @generated
+        */
+        public function will(\PHPUnit\Framework\MockObject\Stub\Stub $stub): self;
         /**
         * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
         * @return self
@@ -5484,12 +7364,14 @@ namespace PHPUnit\Framework\MockObject {
     * @generated
     */
     interface MockObject extends \PHPUnit\Framework\MockObject\Stub {
+        public function expects(\PHPUnit\Framework\MockObject\Rule\InvocationOrder $invocationRule): \PHPUnit\Framework\MockObject\InvocationStubber;
     }
     /**
     * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
     * @generated
     */
     interface Stub {
+        public function method(\PHPUnit\Framework\Constraint\Constraint|\PHPUnit\Framework\MockObject\Runtime\PropertyHook|string $constraint): \PHPUnit\Framework\MockObject\InvocationStubber;
     }
     /**
     * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -5617,6 +7499,11 @@ namespace PHPUnit\Framework\MockObject\Rule {
     * @generated
     */
     interface ParametersRule {
+        /**
+        * @throws ExpectationFailedException if the invocation violates the rule
+        * @generated
+        */
+        public function apply(\PHPUnit\Framework\MockObject\Invocation $invocation): void;
         public function verify(): void;
     }
 }
@@ -7343,7 +9230,7 @@ namespace PHPUnit\Runner\Extension {
     * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
     * @generated
     */
-    interface \PHPUnit\Runner\Extension\Extension {
+    interface Extension {
         public function bootstrap(\PHPUnit\TextUI\Configuration\Configuration $configuration, \PHPUnit\Runner\Extension\Facade $facade, \PHPUnit\Runner\Extension\ParameterCollection $parameters): void;
     }
     /**
@@ -7962,15 +9849,15 @@ namespace PHPUnit\TextUI\Configuration {
     */
     final readonly class DirectoryCollection implements \Countable, \IteratorAggregate {
         /**
-        * @param array<int, \Directory> $directories
+        * @param array<int, Directory> $directories
         * @generated
         */
-        public static function fromArray(array<int, \Directory> $directories): self;
+        public static function fromArray(array<int, \PHPUnit\TextUI\Configuration\Directory> $directories): self;
         /**
-        * @return array<int, \Directory>
+        * @return array<int, Directory>
         * @generated
         */
-        public function asArray(): array<int, \Directory>;
+        public function asArray(): array<int, \PHPUnit\TextUI\Configuration\Directory>;
         public function count(): int;
         public function getIterator(): \PHPUnit\TextUI\Configuration\DirectoryCollectionIterator;
         public function isEmpty(): bool;
@@ -8573,6 +10460,7 @@ namespace PHPUnit\TextUI\Output\Default {
     * @generated
     */
     final readonly class UnexpectedOutputPrinter implements \PHPUnit\Event\Test\PrintedUnexpectedOutputSubscriber {
+        public function __construct(\PHPUnit\TextUI\Output\Printer $printer, \PHPUnit\Event\Facade $facade): void;
         public function notify(\PHPUnit\Event\Test\PrintedUnexpectedOutput $event): void;
     }
 }

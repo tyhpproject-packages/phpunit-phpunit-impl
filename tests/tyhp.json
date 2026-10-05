@@ -5,8 +5,7 @@
     "include": [
         "./test_phpunit_phpunit.tyhp",
         "../composer.json",
-        "../../../php/composer.json",
-        "../../../phar-io-version/3.2.1/composer.json"
+        "../../../php/composer.json"
     ],
     "exclude": [
         "./fail/**"
